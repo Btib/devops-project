@@ -1,0 +1,9 @@
+version: "3"
+services:
+  express:
+    image: express
+    ports:
+      - "3000:3000"
+    build:
+      context: .
+      dockerfile: express-dockerfile

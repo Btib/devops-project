@@ -1,0 +1,12 @@
+---
+- hosts: servers
+  tasks:
+    - name: Clone git repo
+      git:
+        repo: https://github.com/Btib/dockerfile-repo.git
+        version: master
+        dest: /opt/private-repo
+        accept_hostkey: yes
+      become: no
+    - name: Run docker-compose
+      shell: docker-compose -f express-compose.yml up
