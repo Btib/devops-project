@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     #jenkins.ssh.username = "jenkins"
     #jenkins.ssh.password = "jenkins"
     jenkins.vm.synced_folder "./Jenkins-VM/", "/opt/"
-    jenkins.vm.synced_folder "./.vagrant/machines/docker/virtualbox/", "/opt/"
+    jenkins.vm.synced_folder "./.vagrant/machines/jenkins/virtualbox/", "/opt/"
     jenkins.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
       vb.cpus = 1
